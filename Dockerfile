@@ -218,4 +218,4 @@ HEALTHCHECK --interval=3m --timeout=10s --start-period=15s --retries=3 \
   CMD node -e "fetch('http://127.0.0.1:18789/healthz').then((r)=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"
 CMD ["node", "openclaw.mjs", "gateway", "--allow-unconfigured"]
 # 指定 OpenClaw 启动命令
-CMD ["node", "/app/openclaw.mjs", "--host", "0.0.0.0", "--port", "3000"]
+CMD ["node", "/app/openclaw.mjs", "--host", "0.0.0.0", "--port", "8080"]
